@@ -8,689 +8,149 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
+*{ box-sizing:border-box; margin:0; padding:0; }
 :root{
-    --bg:#f8f7fb;
-    --card:#ffffff;
-    --text:#363443;
-    --muted:#858294;
-    --pink:#e8cbd9;
-    --pink-dark:#c89db5;
-    --blue:#cbddea;
-    --blue-dark:#91aec5;
-    --green:#cfe3d7;
-    --green-dark:#91b9a0;
-    --yellow:#f1e5bd;
-    --purple:#ddd2ea;
-    --border:#ece9f0;
-    --shadow:0 10px 35px rgba(70,60,90,.07);
+    --bg:#f8f7fb; --card:#ffffff; --text:#363443; --muted:#858294;
+    --pink:#e8cbd9; --pink-dark:#c89db5; --blue:#cbddea; --blue-dark:#91aec5;
+    --green:#cfe3d7; --green-dark:#91b9a0; --yellow:#f1e5bd; --purple:#ddd2ea;
+    --border:#ece9f0; --shadow:0 10px 35px rgba(70,60,90,.07);
 }
-
-body{
-    font-family:'Nunito',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    min-height:100vh;
-}
-
-button,input{
-    font-family:inherit;
-}
-
-button{
-    cursor:pointer;
-}
-
-.hidden{
-    display:none!important;
-}
+body{ font-family:'Nunito',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+button,input{ font-family:inherit; }
+button{ cursor:pointer; }
+.hidden{ display:none!important; }
 
 /* AUTH */
-
-#authPage{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    background:
-      radial-gradient(circle at 15% 15%,#f0dce7 0,transparent 30%),
-      radial-gradient(circle at 85% 85%,#dce9f2 0,transparent 30%),
-      var(--bg);
-}
-
-.auth-card{
-    width:100%;
-    max-width:430px;
-    background:white;
-    border:1px solid var(--border);
-    border-radius:30px;
-    padding:40px 32px;
-    box-shadow:var(--shadow);
-}
-
-.logo{
-    text-align:center;
-    margin-bottom:28px;
-}
-
-.logo-icon{
-    width:70px;
-    height:70px;
-    border-radius:22px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:32px;
-    background:linear-gradient(135deg,var(--pink),var(--purple));
-}
-
-.logo h1{
-    margin-top:15px;
-    font-size:28px;
-}
-
-.logo p{
-    color:var(--muted);
-    margin-top:5px;
-}
-
-.tabs{
-    display:flex;
-    background:#f6f4f8;
-    padding:5px;
-    border-radius:14px;
-    margin-bottom:22px;
-}
-
-.tabs button{
-    width:50%;
-    border:0;
-    background:transparent;
-    padding:11px;
-    border-radius:10px;
-    color:var(--muted);
-    font-weight:700;
-}
-
-.tabs button.active{
-    background:white;
-    color:var(--text);
-    box-shadow:0 3px 10px rgba(0,0,0,.05);
-}
-
-.field{
-    margin-bottom:15px;
-}
-
-.field label{
-    display:block;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:7px;
-}
-
-.field input{
-    width:100%;
-    padding:13px 15px;
-    border:1px solid var(--border);
-    border-radius:13px;
-    outline:none;
-    transition:.2s;
-}
-
-.field input:focus{
-    border-color:var(--pink-dark);
-}
-
-.primary{
-    width:100%;
-    border:0;
-    padding:14px;
-    border-radius:14px;
-    background:var(--text);
-    color:white;
-    font-weight:800;
-    margin-top:5px;
-}
-
-.error{
-    color:#b86d7f;
-    font-size:13px;
-    margin:10px 0;
-    text-align:center;
-}
+#authPage{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; background: radial-gradient(circle at 15% 15%,#f0dce7 0,transparent 30%), radial-gradient(circle at 85% 85%,#dce9f2 0,transparent 30%), var(--bg); }
+.auth-card{ width:100%; max-width:430px; background:white; border:1px solid var(--border); border-radius:30px; padding:40px 32px; box-shadow:var(--shadow); }
+.logo{ text-align:center; margin-bottom:28px; }
+.logo-icon{ width:70px; height:70px; border-radius:22px; margin:auto; display:flex; align-items:center; justify-content:center; font-size:32px; background:linear-gradient(135deg,var(--pink),var(--purple)); }
+.logo h1{ margin-top:15px; font-size:28px; }
+.logo p{ color:var(--muted); margin-top:5px; }
+.tabs{ display:flex; background:#f6f4f8; padding:5px; border-radius:14px; margin-bottom:22px; }
+.tabs button{ width:50%; border:0; background:transparent; padding:11px; border-radius:10px; color:var(--muted); font-weight:700; }
+.tabs button.active{ background:white; color:var(--text); box-shadow:0 3px 10px rgba(0,0,0,.05); }
+.field{ margin-bottom:15px; }
+.field label{ display:block; font-size:13px; font-weight:700; margin-bottom:7px; }
+.field input{ width:100%; padding:13px 15px; border:1px solid var(--border); border-radius:13px; outline:none; transition:.2s; }
+.field input:focus{ border-color:var(--pink-dark); }
+.primary{ width:100%; border:0; padding:14px; border-radius:14px; background:var(--text); color:white; font-weight:800; margin-top:5px; }
+.error{ color:#b86d7f; font-size:13px; margin:10px 0; text-align:center; }
 
 /* APP */
-
-#app{
-    display:none;
-}
-
-.sidebar{
-    position:fixed;
-    left:0;
-    top:0;
-    bottom:0;
-    width:245px;
-    background:white;
-    border-right:1px solid var(--border);
-    padding:25px 16px;
-    z-index:20;
-}
-
-.side-logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:800;
-    font-size:18px;
-    padding:5px 10px 25px;
-}
-
-.side-logo span{
-    width:40px;
-    height:40px;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--pink);
-}
-
-.nav{
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-}
-
-.nav button{
-    border:0;
-    background:transparent;
-    text-align:left;
-    padding:13px 14px;
-    border-radius:13px;
-    color:var(--muted);
-    font-weight:700;
-}
-
-.nav button:hover,
-.nav button.active{
-    background:#f6f2f6;
-    color:var(--text);
-}
-
-.logout{
-    position:absolute;
-    bottom:25px;
-    left:16px;
-    right:16px;
-    border:1px solid var(--border);
-    background:white;
-    padding:11px;
-    border-radius:12px;
-    color:var(--muted);
-}
-
-.main{
-    margin-left:245px;
-    padding:30px;
-    max-width:1400px;
-}
-
-.topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:28px;
-}
-
-.greeting h2{
-    font-size:27px;
-}
-
-.greeting p{
-    color:var(--muted);
-    margin-top:4px;
-}
-
-.profile-mini{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.avatar{
-    width:45px;
-    height:45px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--purple);
-    font-weight:800;
-}
+#app{ display:none; }
+.sidebar{ position:fixed; left:0; top:0; bottom:0; width:245px; background:white; border-right:1px solid var(--border); padding:25px 16px; z-index:20; }
+.side-logo{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; padding:5px 10px 25px; }
+.side-logo span{ width:40px; height:40px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:var(--pink); }
+.nav{ display:flex; flex-direction:column; gap:5px; }
+.nav button{ border:0; background:transparent; text-align:left; padding:13px 14px; border-radius:13px; color:var(--muted); font-weight:700; }
+.nav button:hover, .nav button.active{ background:#f6f2f6; color:var(--text); }
+.logout{ position:absolute; bottom:25px; left:16px; right:16px; border:1px solid var(--border); background:white; padding:11px; border-radius:12px; color:var(--muted); }
+.main{ margin-left:245px; padding:30px; max-width:1400px; }
+.topbar{ display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; }
+.greeting h2{ font-size:27px; }
+.greeting p{ color:var(--muted); margin-top:4px; }
+.profile-mini{ display:flex; align-items:center; gap:12px; }
+.avatar{ width:45px; height:45px; border-radius:15px; display:flex; align-items:center; justify-content:center; background:var(--purple); font-weight:800; }
 
 /* CARDS */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-    margin-bottom:25px;
-}
-
-.stat{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:20px;
-    box-shadow:var(--shadow);
-}
-
-.stat-icon{
-    font-size:23px;
-}
-
-.stat-value{
-    font-size:26px;
-    font-weight:800;
-    margin-top:8px;
-}
-
-.stat-name{
-    color:var(--muted);
-    font-size:13px;
-}
-
-.section-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin:28px 0 15px;
-}
-
-.section-title h3{
-    font-size:20px;
-}
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:25px; }
+.stat{ background:white; border:1px solid var(--border); border-radius:20px; padding:20px; box-shadow:var(--shadow); }
+.stat-icon{ font-size:23px; }
+.stat-value{ font-size:26px; font-weight:800; margin-top:8px; }
+.stat-name{ color:var(--muted); font-size:13px; }
+.section-title{ display:flex; justify-content:space-between; align-items:center; margin:28px 0 15px; }
+.section-title h3{ font-size:20px; }
 
 /* DASHBOARD */
-
-.hero{
-    background:linear-gradient(120deg,#eee1e8,#e2eaf1);
-    border-radius:25px;
-    padding:28px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-}
-
-.hero-text{
-    max-width:650px;
-}
-
-.hero h2{
-    font-size:25px;
-    margin-bottom:8px;
-}
-
-.hero p{
-    color:#6e6a77;
-    line-height:1.6;
-}
-
-.hero button{
-    border:0;
-    padding:13px 20px;
-    border-radius:13px;
-    background:white;
-    font-weight:800;
-}
-
-.progress-box{
-    margin-top:18px;
-}
-
-.progress{
-    height:9px;
-    background:rgba(255,255,255,.65);
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.progress-fill{
-    height:100%;
-    width:0%;
-    background:var(--pink-dark);
-    border-radius:20px;
-    transition:.5s;
-}
+.hero{ background:linear-gradient(120deg,#eee1e8,#e2eaf1); border-radius:25px; padding:28px; display:flex; justify-content:space-between; align-items:center; margin-bottom:25px; }
+.hero-text{ max-width:650px; }
+.hero h2{ font-size:25px; margin-bottom:8px; }
+.hero p{ color:#6e6a77; line-height:1.6; }
+.hero button{ border:0; padding:13px 20px; border-radius:13px; background:white; font-weight:800; }
+.progress-box{ margin-top:18px; }
+.progress{ height:9px; background:rgba(255,255,255,.65); border-radius:20px; overflow:hidden; }
+.progress-fill{ height:100%; width:0%; background:var(--pink-dark); border-radius:20px; transition:.5s; }
 
 /* COURSES */
-
-.course-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:17px;
-}
-
-.course{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:21px;
-    padding:21px;
-    box-shadow:var(--shadow);
-}
-
-.course-icon{
-    width:47px;
-    height:47px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:15px;
-    font-size:22px;
-    margin-bottom:15px;
-}
-
+.course-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:17px; }
+.course{ background:white; border:1px solid var(--border); border-radius:21px; padding:21px; box-shadow:var(--shadow); }
+.course-icon{ width:47px; height:47px; display:flex; align-items:center; justify-content:center; border-radius:15px; font-size:22px; margin-bottom:15px; }
 .course:nth-child(1) .course-icon{background:var(--pink)}
 .course:nth-child(2) .course-icon{background:var(--blue)}
 .course:nth-child(3) .course-icon{background:var(--green)}
 .course:nth-child(4) .course-icon{background:var(--yellow)}
 .course:nth-child(5) .course-icon{background:var(--purple)}
 .course:nth-child(6) .course-icon{background:#e7ddd3}
-
-.course h4{
-    font-size:17px;
-}
-
-.course p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.5;
-    margin:6px 0 15px;
-}
-
-.course button{
-    border:0;
-    background:#f5f2f6;
-    padding:10px 14px;
-    border-radius:11px;
-    font-weight:700;
-}
+.course h4{ font-size:17px; }
+.course p{ color:var(--muted); font-size:13px; line-height:1.5; margin:6px 0 15px; }
+.course button{ border:0; background:#f5f2f6; padding:10px 14px; border-radius:11px; font-weight:700; }
 
 /* LESSONS */
-
-.lesson-list{
-    display:grid;
-    gap:12px;
-}
-
-.lesson{
-    background:white;
-    border:1px solid var(--border);
-    padding:18px 20px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.lesson-left{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.lesson-number{
-    width:40px;
-    height:40px;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#f3edf2;
-    font-weight:800;
-}
-
-.lesson h4{
-    font-size:15px;
-}
-
-.lesson p{
-    color:var(--muted);
-    font-size:12px;
-    margin-top:3px;
-}
-
-.lesson button{
-    border:0;
-    background:var(--text);
-    color:white;
-    padding:9px 14px;
-    border-radius:10px;
-    font-weight:700;
-}
+.lesson-list{ display:grid; gap:12px; }
+.lesson{ background:white; border:1px solid var(--border); padding:18px 20px; border-radius:18px; display:flex; align-items:center; justify-content:space-between; }
+.lesson-left{ display:flex; align-items:center; gap:15px; }
+.lesson-number{ width:40px; height:40px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:#f3edf2; font-weight:800; }
+.lesson h4{ font-size:15px; }
+.lesson p{ color:var(--muted); font-size:12px; margin-top:3px; }
+.lesson button{ border:0; background:var(--text); color:white; padding:9px 14px; border-radius:10px; font-weight:700; }
 
 /* QUIZ */
-
-.quiz-card{
-    max-width:760px;
-    margin:auto;
-    background:white;
-    border:1px solid var(--border);
-    border-radius:25px;
-    padding:28px;
-    box-shadow:var(--shadow);
-}
-
-.quiz-head{
-    display:flex;
-    justify-content:space-between;
-    color:var(--muted);
-    font-size:13px;
-    margin-bottom:25px;
-}
-
-.question{
-    font-size:21px;
-    line-height:1.45;
-    font-weight:800;
-    margin-bottom:22px;
-}
-
-.answers{
-    display:grid;
-    gap:10px;
-}
-
-.answer{
-    border:1px solid var(--border);
-    background:#fbfafc;
-    padding:14px;
-    border-radius:13px;
-    text-align:left;
-    font-size:14px;
-}
-
-.answer:hover{
-    border-color:var(--pink-dark);
-}
-
-.answer.correct{
-    background:#e5f1e9;
-    border-color:#a8c9b4;
-}
-
-.answer.wrong{
-    background:#f5e4e8;
-    border-color:#d9a9b5;
-}
-
-.explanation{
-    margin-top:15px;
-    padding:14px;
-    border-radius:13px;
-    background:#f7f4f8;
-    color:#686472;
-    line-height:1.5;
-    font-size:14px;
-}
-
-.next-btn{
-    width:100%;
-    margin-top:18px;
-    padding:13px;
-    border:0;
-    border-radius:13px;
-    background:var(--text);
-    color:white;
-    font-weight:800;
-}
+.quiz-card{ max-width:760px; margin:auto; background:white; border:1px solid var(--border); border-radius:25px; padding:28px; box-shadow:var(--shadow); }
+.quiz-head{ display:flex; justify-content:space-between; color:var(--muted); font-size:13px; margin-bottom:25px; }
+.question{ font-size:21px; line-height:1.45; font-weight:800; margin-bottom:22px; }
+.answers{ display:grid; gap:10px; }
+.answer{ border:1px solid var(--border); background:#fbfafc; padding:14px; border-radius:13px; text-align:left; font-size:14px; }
+.answer:hover{ border-color:var(--pink-dark); }
+.answer.correct{ background:#e5f1e9; border-color:#a8c9b4; }
+.answer.wrong{ background:#f5e4e8; border-color:#d9a9b5; }
+.explanation{ margin-top:15px; padding:14px; border-radius:13px; background:#f7f4f8; color:#686472; line-height:1.5; font-size:14px; }
+.next-btn{ width:100%; margin-top:18px; padding:13px; border:0; border-radius:13px; background:var(--text); color:white; font-weight:800; }
 
 /* ANALYTICS */
-
-.chart-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:22px;
-    padding:25px;
-}
-
-.chart-row{
-    margin:18px 0;
-}
-
-.chart-label{
-    display:flex;
-    justify-content:space-between;
-    font-size:13px;
-    margin-bottom:6px;
-}
-
-.bar{
-    height:13px;
-    background:#f0eef2;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.bar-fill{
-    height:100%;
-    border-radius:20px;
-}
-
-.before{
-    background:#d8b8c6;
-}
-
-.after{
-    background:#9db9ca;
-}
+.chart-card{ background:white; border:1px solid var(--border); border-radius:22px; padding:25px; }
+.chart-row{ margin:18px 0; }
+.chart-label{ display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px; }
+.bar{ height:13px; background:#f0eef2; border-radius:20px; overflow:hidden; }
+.bar-fill{ height:100%; border-radius:20px; }
+.before{ background:#d8b8c6; }
+.after{ background:#9db9ca; }
 
 /* PROFILE */
+.profile-card{ background:white; border:1px solid var(--border); border-radius:24px; padding:28px; max-width:700px; }
+.big-avatar{ width:80px; height:80px; background:var(--purple); border-radius:25px; display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:800; margin-bottom:15px; }
+.badges{ display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+.badge{ background:#f5f2f7; padding:12px 15px; border-radius:14px; font-size:13px; }
 
-.profile-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:24px;
-    padding:28px;
-    max-width:700px;
-}
-
-.big-avatar{
-    width:80px;
-    height:80px;
-    background:var(--purple);
-    border-radius:25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:30px;
-    font-weight:800;
-    margin-bottom:15px;
-}
-
-.badges{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:20px;
-}
-
-.badge{
-    background:#f5f2f7;
-    padding:12px 15px;
-    border-radius:14px;
-    font-size:13px;
-}
+/* AI CHAT WIDGET */
+#aiChatBtn { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background: var(--text); color: white; font-size: 28px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; justify-content: center; }
+#aiChatWindow { position: fixed; bottom: 90px; right: 20px; width: 320px; height: 450px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; flex-direction: column; z-index: 1000; overflow: hidden; border: 1px solid var(--border); }
+#aiChatHeader { background: var(--text); color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+#aiChatMessages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+.ai-msg { padding: 10px 14px; border-radius: 15px; max-width: 85%; line-height: 1.4; }
+.ai-msg.user { background: var(--pink); color: var(--text); align-self: flex-end; border-bottom-right-radius: 3px; }
+.ai-msg.model { background: #f4f4f6; color: var(--text); align-self: flex-start; border-bottom-left-radius: 3px; }
+#aiChatInputArea { display: flex; padding: 10px; border-top: 1px solid var(--border); background: white; }
+#aiChatInput { flex: 1; border: 1px solid var(--border); border-radius: 20px; padding: 10px 15px; outline: none; font-size: 14px; }
+#aiChatSend { background: var(--text); color: white; border: none; border-radius: 20px; padding: 0 15px; margin-left: 8px; font-weight: bold; }
 
 /* MOBILE */
-
-.mobile-menu{
-    display:none;
-}
-
+.mobile-menu{ display:none; }
 @media(max-width:900px){
-    .sidebar{
-        width:210px;
-    }
-
-    .main{
-        margin-left:210px;
-    }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .course-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+    .sidebar{ width:210px; }
+    .main{ margin-left:210px; }
+    .stats{ grid-template-columns:repeat(2,1fr); }
+    .course-grid{ grid-template-columns:repeat(2,1fr); }
 }
-
 @media(max-width:650px){
-    .sidebar{
-        display:none;
-    }
-
-    .main{
-        margin-left:0;
-        padding:18px;
-    }
-
-    .mobile-menu{
-        display:block;
-        border:0;
-        background:white;
-        padding:10px 13px;
-        border-radius:10px;
-    }
-
-    .topbar{
-        gap:10px;
-    }
-
-    .hero{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:18px;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .course-grid{
-        grid-template-columns:1fr;
-    }
+    .sidebar{ display:none; }
+    .main{ margin-left:0; padding:18px; }
+    .mobile-menu{ display:block; border:0; background:white; padding:10px 13px; border-radius:10px; }
+    .topbar{ gap:10px; }
+    .hero{ flex-direction:column; align-items:flex-start; gap:18px; }
+    .stats{ grid-template-columns:1fr 1fr; }
+    .course-grid{ grid-template-columns:1fr; }
+    #aiChatWindow { width: calc(100% - 40px); right: 20px; height: 60vh; bottom: 90px; }
 }
 </style>
 </head>
@@ -698,240 +158,203 @@ button{
 <body>
 
 <!-- AUTH -->
-
 <div id="authPage">
-
 <div class="auth-card">
-
 <div class="logo">
     <div class="logo-icon">✦</div>
     <h1>AI Grammar Quest</h1>
     <p>Изучай грамматику как игру</p>
 </div>
-
 <div class="tabs">
     <button id="loginTab" class="active" onclick="showAuth('login')">Вход</button>
     <button id="registerTab" onclick="showAuth('register')">Регистрация</button>
 </div>
-
 <div id="loginForm">
-
-<div class="field">
-<label>Email</label>
-<input id="loginEmail" type="email" placeholder="Введите email">
-</div>
-
-<div class="field">
-<label>Пароль</label>
-<input id="loginPassword" type="password" placeholder="Введите пароль">
-</div>
-
+<div class="field"><label>Email</label><input id="loginEmail" type="email" placeholder="Введите email"></div>
+<div class="field"><label>Пароль</label><input id="loginPassword" type="password" placeholder="Введите пароль"></div>
 <div id="loginError" class="error"></div>
-
 <button class="primary" onclick="login()">Войти</button>
-
 </div>
-
 <div id="registerForm" class="hidden">
-
-<div class="field">
-<label>Имя</label>
-<input id="regName" placeholder="Например, Анель">
-</div>
-
-<div class="field">
-<label>Email</label>
-<input id="regEmail" type="email" placeholder="Введите email">
-</div>
-
-<div class="field">
-<label>Пароль</label>
-<input id="regPassword" type="password" placeholder="Минимум 6 символов">
-</div>
-
+<div class="field"><label>Имя</label><input id="regName" placeholder="Например, Анель"></div>
+<div class="field"><label>Email</label><input id="regEmail" type="email" placeholder="Введите email"></div>
+<div class="field"><label>Пароль</label><input id="regPassword" type="password" placeholder="Минимум 6 символов"></div>
 <div id="registerError" class="error"></div>
-
 <button class="primary" onclick="register()">Создать аккаунт</button>
-
-</div>
-
 </div>
 </div>
-
+</div>
 
 <!-- APP -->
-
 <div id="app">
-
 <aside class="sidebar">
-
-<div class="side-logo">
-<span>✦</span>
-AI Grammar Quest
-</div>
-
+<div class="side-logo"><span>✦</span>AI Grammar Quest</div>
 <nav class="nav">
-
 <button class="active" onclick="navigate('home',this)">⌂ Главная</button>
 <button onclick="navigate('courses',this)">▣ Разделы</button>
 <button onclick="navigate('diagnostic',this)">◈ Диагностика</button>
 <button onclick="navigate('analytics',this)">◫ Аналитика</button>
 <button onclick="navigate('profile',this)">♙ Профиль</button>
-
 </nav>
-
 <button class="logout" onclick="logout()">Выйти из аккаунта</button>
-
 </aside>
-
 <main class="main">
-
 <div class="topbar">
-
 <button class="mobile-menu" onclick="toggleMobile()">☰</button>
-
 <div class="greeting">
 <h2 id="greeting">Добро пожаловать!</h2>
 <p>Продолжим изучение русского языка?</p>
 </div>
-
 <div class="profile-mini">
-<div>
-<b id="miniName"></b>
-<div style="font-size:12px;color:var(--muted)">Ученик</div>
-</div>
+<div><b id="miniName"></b><div style="font-size:12px;color:var(--muted)">Ученик</div></div>
 <div class="avatar" id="miniAvatar">А</div>
 </div>
-
 </div>
-
 <div id="content"></div>
-
 </main>
 </div>
 
+<!-- AI CHAT WIDGET -->
+<button id="aiChatBtn" onclick="toggleChat()">💬</button>
+<div id="aiChatWindow">
+    <div id="aiChatHeader">
+        <span>ИИ-Помощник</span>
+        <span onclick="toggleChat()" style="cursor:pointer; font-size:20px;">&times;</span>
+    </div>
+    <div id="aiChatMessages">
+        <div class="ai-msg model">Привет! Я помогу тебе с правилами русского языка. Спроси меня о чем-нибудь!</div>
+    </div>
+    <div id="aiChatInputArea">
+        <input id="aiChatInput" type="text" placeholder="Напиши вопрос..." onkeypress="if(event.key==='Enter') sendAI()">
+        <button id="aiChatSend" onclick="sendAI()">➤</button>
+    </div>
+</div>
 
 <script>
+/* =========================
+   AI CHAT LOGIC
+========================= */
+// ВСТАВЬТЕ СЮДА ВАШ АДРЕС CLOUDFLARE WORKER:
+const AI_ENDPOINT = "grammar-ai-helper.2thjh56gmp-eb9.workers.dev"; 
+
+let aiHistory = [];
+
+function toggleChat() {
+    const w = document.getElementById('aiChatWindow');
+    w.style.display = w.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function buildSystemPrompt() {
+    return "Ты — дружелюбный учитель русского языка. Отвечай кратко, понятно и по делу. Приводи примеры. Не используй сложные термины без объяснений.";
+}
+
+async function sendAI() {
+    const input = document.getElementById('aiChatInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    const messagesContainer = document.getElementById('aiChatMessages');
+    
+    // Добавляем сообщение пользователя
+    messagesContainer.innerHTML += `<div class="ai-msg user">${text}</div>`;
+    input.value = '';
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    // Добавляем "печатает..."
+    const loadingId = 'loading-' + Date.now();
+    messagesContainer.innerHTML += `<div class="ai-msg model" id="${loadingId}">Печатает...</div>`;
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    aiHistory.push({ role: "user", content: text });
+
+    try {
+        const res = await fetch(AI_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                systemInstruction: { parts: [{ text: buildSystemPrompt() }] },
+                contents: aiHistory.slice(-10).map(m => ({
+                    role: m.role === "assistant" ? "model" : "user",
+                    parts: [{ text: m.content }]
+                }))
+            })
+        });
+
+        const data = await res.json();
+        const reply = data.candidates?.[0]?.content?.parts?.map(p => p.text).join("") || "Не удалось получить ответ.";
+        
+        document.getElementById(loadingId).textContent = reply;
+        aiHistory.push({ role: "assistant", content: reply });
+    } catch (e) {
+        document.getElementById(loadingId).textContent = "Ошибка сети. Проверьте подключение к интернету.";
+    }
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
 
 /* =========================
    DATABASE / AUTH
 ========================= */
-
 const STORAGE_USERS="grammarQuestUsers";
 const STORAGE_SESSION="grammarQuestSession";
 
-function getUsers(){
-    return JSON.parse(localStorage.getItem(STORAGE_USERS)||"{}");
-}
-
-function saveUsers(users){
-    localStorage.setItem(STORAGE_USERS,JSON.stringify(users));
-}
+function getUsers(){ return JSON.parse(localStorage.getItem(STORAGE_USERS)||"{}"); }
+function saveUsers(users){ localStorage.setItem(STORAGE_USERS,JSON.stringify(users)); }
 
 function showAuth(type){
-
     document.getElementById("loginForm").classList.toggle("hidden",type!=="login");
     document.getElementById("registerForm").classList.toggle("hidden",type!=="register");
-
     document.getElementById("loginTab").classList.toggle("active",type==="login");
     document.getElementById("registerTab").classList.toggle("active",type==="register");
 }
 
 function register(){
-
     const name=document.getElementById("regName").value.trim();
     const email=document.getElementById("regEmail").value.trim().toLowerCase();
     const password=document.getElementById("regPassword").value;
-
     const error=document.getElementById("registerError");
 
-    if(!name || !email || !password){
-        error.textContent="Заполните все поля.";
-        return;
-    }
-
-    if(password.length<6){
-        error.textContent="Пароль должен содержать минимум 6 символов.";
-        return;
-    }
+    if(!name || !email || !password){ error.textContent="Заполните все поля."; return; }
+    if(password.length<6){ error.textContent="Пароль должен содержать минимум 6 символов."; return; }
 
     const users=getUsers();
+    if(users[email]){ error.textContent="Аккаунт с таким email уже существует."; return; }
 
-    if(users[email]){
-        error.textContent="Аккаунт с таким email уже существует.";
-        return;
-    }
-
-    users[email]={
-        name,
-        email,
-        password,
-        stars:0,
-        streak:0,
-        completed:[],
-        mistakes:{
-            participle:0,
-            gerund:0,
-            spp:0,
-            punctuation:0
-        },
-        before:null,
-        after:null,
-        created:new Date().toISOString()
-    };
-
+    users[email]={ name, email, password, stars:0, streak:0, completed:[], mistakes:{ participle:0, gerund:0, spp:0, punctuation:0 }, before:null, after:null, created:new Date().toISOString() };
     saveUsers(users);
-
     localStorage.setItem(STORAGE_SESSION,email);
-
     openApp();
 }
 
 function login(){
-
     const email=document.getElementById("loginEmail").value.trim().toLowerCase();
     const password=document.getElementById("loginPassword").value;
-
     const users=getUsers();
     const error=document.getElementById("loginError");
 
-    if(!users[email] || users[email].password!==password){
-        error.textContent="Неверный email или пароль.";
-        return;
-    }
-
+    if(!users[email] || users[email].password!==password){ error.textContent="Неверный email или пароль."; return; }
     localStorage.setItem(STORAGE_SESSION,email);
-
     openApp();
 }
 
 function logout(){
-
     localStorage.removeItem(STORAGE_SESSION);
-
     document.getElementById("app").style.display="none";
     document.getElementById("authPage").style.display="flex";
-
     showAuth("login");
 }
 
 function currentUser(){
-
     const session=localStorage.getItem(STORAGE_SESSION);
     const users=getUsers();
-
     return session ? users[session] : null;
 }
 
 function updateUser(data){
-
     const session=localStorage.getItem(STORAGE_SESSION);
     const users=getUsers();
-
     if(!session || !users[session]) return;
-
     users[session]=data;
-
     saveUsers(users);
 }
 
@@ -939,374 +362,69 @@ function updateUser(data){
 /* =========================
    LESSON DATABASE
 ========================= */
-
 const sections=[
-
-{
-id:"participle",
-icon:"🌸",
-title:"Причастие",
-description:"Образование, виды, обороты и пунктуация.",
-lessons:[
-["Причастие как часть речи","Определяем значение и грамматические признаки."],
-["Действительные причастия","Учимся образовывать и распознавать формы."],
-["Страдательные причастия","Разбираемся в способах образования."],
-["Причастный оборот","Находим зависимые слова."],
-["Пунктуация при причастном обороте","Учимся правильно расставлять знаки."],
-["Причастия в тексте","Используем конструкции в собственных предложениях."]
-]
-},
-
-{
-id:"gerund",
-icon:"🌿",
-title:"Деепричастие",
-description:"Добавочное действие и деепричастные обороты.",
-lessons:[
-["Деепричастие как часть речи","Основное и добавочное действие."],
-["Образование деепричастий","Совершенный и несовершенный вид."],
-["Деепричастный оборот","Определяем границы конструкции."],
-["Пунктуация с деепричастиями","Когда нужна запятая."],
-["Грамматическая связь","Кто выполняет основное действие?" ],
-["Использование в письменной речи","Создаём собственные конструкции."]
-]
-},
-
-{
-id:"spp",
-icon:"🪻",
-title:"СПП",
-description:"Сложноподчинённые предложения и виды придаточных.",
-lessons:[
-["Строение СПП","Главная и придаточная части."],
-["Подчинительные союзы","Выбираем подходящий союз."],
-["Союзные слова","Который, где, когда, почему и другие."],
-["Придаточные определительные","Характеристика предмета."],
-["Придаточные изъяснительные","Передача содержания мысли."],
-["Придаточные обстоятельственные","Причина, время, условие, цель."],
-["Схемы СПП","Учимся строить схемы."],
-["Конструирование СПП","Создаём сложные предложения."]
-]
-},
-
-{
-id:"punctuation",
-icon:"🫧",
-title:"Пунктуация",
-description:"Запятые и другие знаки в сложных конструкциях.",
-lessons:[
-["Запятая при причастии","Основные случаи."],
-["Запятая при деепричастии","Обособление оборота."],
-["Запятая между частями СПП","Границы главной и придаточной частей."],
-["Однородные конструкции","Несколько действий и признаков."],
-["Сложные случаи","Разбираем исключения."],
-["Пунктуационный практикум","Исправляем ошибки."]
-]
-},
-
-{
-id:"syntax",
-icon:"📖",
-title:"Синтаксис",
-description:"Связи слов и построение грамотных предложений.",
-lessons:[
-["Словосочетание","Главное и зависимое слово."],
-["Простое предложение","Грамматическая основа."],
-["Односоставные предложения","Основные типы."],
-["Осложнённые предложения","Обособленные конструкции."],
-["Сложные предложения","Основные виды связи."],
-["Синтаксический разбор","Пошаговый алгоритм."]
-]
-},
-
-{
-id:"style",
-icon:"☁️",
-title:"Грамматика в тексте",
-description:"Применяем знания в реальной письменной речи.",
-lessons:[
-["Редактируем текст","Находим и исправляем ошибки."],
-["Грамматическая связность","Связываем части текста."],
-["Сложные предложения в эссе","Делаем речь выразительнее."],
-["Научный стиль","Грамматические особенности."],
-["Публицистический стиль","Работа с аргументацией."],
-["Итоговый грамматический квест","Проверяем все навыки."]
-]
-}
+{id:"participle",icon:"🌸",title:"Причастие",description:"Образование, виды, обороты и пунктуация.",lessons:[["Причастие как часть речи","Определяем значение и грамматические признаки."],["Действительные причастия","Учимся образовывать и распознавать формы."],["Страдательные причастия","Разбираемся в способах образования."],["Причастный оборот","Находим зависимые слова."],["Пунктуация при причастном обороте","Учимся правильно расставлять знаки."],["Причастия в тексте","Используем конструкции в собственных предложениях."]]},
+{id:"gerund",icon:"🌿",title:"Деепричастие",description:"Добавочное действие и деепричастные обороты.",lessons:[["Деепричастие как часть речи","Основное и добавочное действие."],["Образование деепричастий","Совершенный и несовершенный вид."],["Деепричастный оборот","Определяем границы конструкции."],["Пунктуация с деепричастиями","Когда нужна запятая."],["Грамматическая связь","Кто выполняет основное действие?" ],["Использование в письменной речи","Создаём собственные конструкции."]]},
+{id:"spp",icon:"🪻",title:"СПП",description:"Сложноподчинённые предложения и виды придаточных.",lessons:[["Строение СПП","Главная и придаточная части."],["Подчинительные союзы","Выбираем подходящий союз."],["Союзные слова","Который, где, когда, почему и другие."],["Придаточные определительные","Характеристика предмета."],["Придаточные изъяснительные","Передача содержания мысли."],["Придаточные обстоятельственные","Причина, время, условие, цель."],["Схемы СПП","Учимся строить схемы."],["Конструирование СПП","Создаём сложные предложения."]]},
+{id:"punctuation",icon:"🫧",title:"Пунктуация",description:"Запятые и другие знаки в сложных конструкциях.",lessons:[["Запятая при причастии","Основные случаи."],["Запятая при деепричастии","Обособление оборота."],["Запятая между частями СПП","Границы главной и придаточной частей."],["Однородные конструкции","Несколько действий и признаков."],["Сложные случаи","Разбираем исключения."],["Пунктуационный практикум","Исправляем ошибки."]]},
+{id:"syntax",icon:"📖",title:"Синтаксис",description:"Связи слов и построение грамотных предложений.",lessons:[["Словосочетание","Главное и зависимое слово."],["Простое предложение","Грамматическая основа."],["Односоставные предложения","Основные типы."],["Осложнённые предложения","Обособленные конструкции."],["Сложные предложения","Основные виды связи."],["Синтаксический разбор","Пошаговый алгоритм."]]},
+{id:"style",icon:"☁️",title:"Грамматика в тексте",description:"Применяем знания в реальной письменной речи.",lessons:[["Редактируем текст","Находим и исправляем ошибки."],["Грамматическая связность","Связываем части текста."],["Сложные предложения в эссе","Делаем речь выразительнее."],["Научный стиль","Грамматические особенности."],["Публицистический стиль","Работа с аргументацией."],["Итоговый грамматический квест","Проверяем все навыки."]]}
 ];
 
 
 /* =========================
    QUIZ DATABASE
 ========================= */
-
 const quizzes={
-
 participle:[
-{
-q:"В каком предложении есть причастный оборот?",
-a:[
-"Ученики внимательно слушали.",
-"Ученики, изучающие тему, записывали правила.",
-"Ученики изучают тему.",
-"Ученики сделали записи."
+{q:"В каком предложении есть причастный оборот?",a:["Ученики внимательно слушали.","Ученики, изучающие тему, записывали правила.","Ученики изучают тему.","Ученики сделали записи."],correct:1,explain:"«Изучающие тему» — причастие с зависимыми словами, то есть причастный оборот."},
+{q:"Выберите правильное написание:",a:["прочитавший книгу ученик","прочитавшый книгу ученик","прочитавши книгу ученик","прочитанный книгу ученик"],correct:0,explain:"«Прочитавший» — действительное причастие прошедшего времени."},
+{q:"Где правильно расставлены знаки?",a:["Книга лежащая на столе принадлежит мне.","Книга, лежащая на столе, принадлежит мне.","Книга лежащая, на столе принадлежит мне.","Книга, лежащая на столе принадлежит мне."],correct:1,explain:"Причастный оборот стоит после определяемого слова и обособляется с двух сторон."},
+{q:"Что обозначает причастие?",a:["Только предмет","Признак предмета по действию","Только действие","Количество предметов"],correct:1,explain:"Причастие обозначает признак предмета по действию."},
+{q:"В каком варианте причастие является страдательным?",a:["читающий ученик","бегущий спортсмен","написанное письмо","улыбающийся ребёнок"],correct:2,explain:"«Написанное» обозначает признак предмета, над которым совершено действие."}
 ],
-correct:1,
-explain:"«Изучающие тему» — причастие с зависимыми словами, то есть причастный оборот."
-},
-{
-q:"Выберите правильное написание:",
-a:[
-"прочитавший книгу ученик",
-"прочитавшый книгу ученик",
-"прочитавши книгу ученик",
-"прочитанный книгу ученик"
-],
-correct:0,
-explain:"«Прочитавший» — действительное причастие прошедшего времени."
-},
-{
-q:"Где правильно расставлены знаки?",
-a:[
-"Книга лежащая на столе принадлежит мне.",
-"Книга, лежащая на столе, принадлежит мне.",
-"Книга лежащая, на столе принадлежит мне.",
-"Книга, лежащая на столе принадлежит мне."
-],
-correct:1,
-explain:"Причастный оборот стоит после определяемого слова и обособляется с двух сторон."
-},
-{
-q:"Что обозначает причастие?",
-a:[
-"Только предмет",
-"Признак предмета по действию",
-"Только действие",
-"Количество предметов"
-],
-correct:1,
-explain:"Причастие обозначает признак предмета по действию."
-},
-{
-q:"В каком варианте причастие является страдательным?",
-a:[
-"читающий ученик",
-"бегущий спортсмен",
-"написанное письмо",
-"улыбающийся ребёнок"
-],
-correct:2,
-explain:"«Написанное» обозначает признак предмета, над которым совершено действие."
-}
-],
-
 gerund:[
-{
-q:"Найдите деепричастный оборот:",
-a:[
-"прочитанная книга",
-"читая книгу",
-"интересная книга",
-"книга ученика"
+{q:"Найдите деепричастный оборот:",a:["прочитанная книга","читая книгу","интересная книга","книга ученика"],correct:1,explain:"«Читая книгу» обозначает добавочное действие."},
+{q:"Выберите правильное предложение:",a:["Читая книгу ученик делал заметки.","Читая книгу, ученик делал заметки.","Читая, книгу ученик делал заметки.","Читая книгу ученик, делал заметки."],correct:1,explain:"Деепричастный оборот обособляется запятой."},
+{q:"Какое условие обязательно для правильного употребления деепричастия?",a:["Основное и добавочное действие выполняет одно лицо.","В предложении должно быть два подлежащих.","Должно быть существительное.","Нужно использовать союз."],correct:0,explain:"Действие, выраженное деепричастием, должно относиться к тому же действующему лицу."},
+{q:"Какое деепричастие имеет значение завершённого действия?",a:["читая","делая","прочитав","изучая"],correct:2,explain:"«Прочитав» — деепричастие совершенного вида."},
+{q:"Найдите ошибочное предложение:",a:["Улыбаясь, девочка вошла в комнату.","Подойдя к окну, ученик посмотрел наружу.","Читая книгу, мне стало интересно.","Закончив работу, ученик вышел."],correct:2,explain:"В предложении «Читая книгу, мне стало интересно» нет действующего лица, которое могло бы выполнять действие «читая»."}
 ],
-correct:1,
-explain:"«Читая книгу» обозначает добавочное действие."
-},
-{
-q:"Выберите правильное предложение:",
-a:[
-"Читая книгу ученик делал заметки.",
-"Читая книгу, ученик делал заметки.",
-"Читая, книгу ученик делал заметки.",
-"Читая книгу ученик, делал заметки."
-],
-correct:1,
-explain:"Деепричастный оборот обособляется запятой."
-},
-{
-q:"Какое условие обязательно для правильного употребления деепричастия?",
-a:[
-"Основное и добавочное действие выполняет одно лицо.",
-"В предложении должно быть два подлежащих.",
-"Должно быть существительное.",
-"Нужно использовать союз."
-],
-correct:0,
-explain:"Действие, выраженное деепричастием, должно относиться к тому же действующему лицу."
-},
-{
-q:"Какое деепричастие имеет значение завершённого действия?",
-a:[
-"читая",
-"делая",
-"прочитав",
-"изучая"
-],
-correct:2,
-explain:"«Прочитав» — деепричастие совершенного вида."
-},
-{
-q:"Найдите ошибочное предложение:",
-a:[
-"Улыбаясь, девочка вошла в комнату.",
-"Подойдя к окну, ученик посмотрел наружу.",
-"Читая книгу, мне стало интересно.",
-"Закончив работу, ученик вышел."
-],
-correct:2,
-explain:"В предложении «Читая книгу, мне стало интересно» нет действующего лица, которое могло бы выполнять действие «читая»."
-}
-],
-
 spp:[
-{
-q:"Какое предложение является СПП?",
-a:[
-"Наступил вечер.",
-"Солнце село, и стало прохладно.",
-"Я знаю, что ты придёшь.",
-"Солнце светит ярко."
+{q:"Какое предложение является СПП?",a:["Наступил вечер.","Солнце село, и стало прохладно.","Я знаю, что ты придёшь.","Солнце светит ярко."],correct:2,explain:"В СПП части связаны подчинительной связью: «Я знаю» + «что ты придёшь»."},
+{q:"Какой союз обычно вводит придаточное причины?",a:["если","потому что","который","чтобы"],correct:1,explain:"«Потому что» выражает причинное значение."},
+{q:"Определите вид придаточного: «Я вернулся туда, где провёл детство».",a:["изъяснительное","определительное","места","условия"],correct:2,explain:"Придаточная часть отвечает на вопрос «куда? где?» и обозначает место."},
+{q:"Какое слово является союзным словом?",a:["что","если","который","потому что"],correct:2,explain:"«Который» является относительным местоимением и может выступать союзным словом."},
+{q:"Выберите правильную пунктуацию:",a:["Я знаю что ты придёшь.","Я знаю, что ты придёшь.","Я знаю что, ты придёшь.","Я, знаю что ты придёшь."],correct:1,explain:"Придаточная часть отделяется от главной запятой."}
 ],
-correct:2,
-explain:"В СПП части связаны подчинительной связью: «Я знаю» + «что ты придёшь»."
-},
-{
-q:"Какой союз обычно вводит придаточное причины?",
-a:[
-"если",
-"потому что",
-"который",
-"чтобы"
-],
-correct:1,
-explain:"«Потому что» выражает причинное значение."
-},
-{
-q:"Определите вид придаточного: «Я вернулся туда, где провёл детство».",
-a:[
-"изъяснительное",
-"определительное",
-"места",
-"условия"
-],
-correct:2,
-explain:"Придаточная часть отвечает на вопрос «куда? где?» и обозначает место."
-},
-{
-q:"Какое слово является союзным словом?",
-a:[
-"что",
-"если",
-"который",
-"потому что"
-],
-correct:2,
-explain:"«Который» является относительным местоимением и может выступать союзным словом."
-},
-{
-q:"Выберите правильную пунктуацию:",
-a:[
-"Я знаю что ты придёшь.",
-"Я знаю, что ты придёшь.",
-"Я знаю что, ты придёшь.",
-"Я, знаю что ты придёшь."
-],
-correct:1,
-explain:"Придаточная часть отделяется от главной запятой."
-}
-],
-
 punctuation:[
-{
-q:"Выберите правильный вариант:",
-a:[
-"Читая книгу ученик делал заметки.",
-"Читая книгу, ученик делал заметки.",
-"Читая, книгу ученик делал заметки.",
-"Читая книгу ученик, делал заметки."
-],
-correct:1,
-explain:"Деепричастный оборот обособляется."
-},
-{
-q:"Где нужна запятая?",
-a:[
-"Я знаю что ты прав.",
-"Я знаю, что ты прав.",
-"Я, знаю что ты прав.",
-"Я знаю что, ты прав."
-],
-correct:1,
-explain:"Придаточная часть СПП отделяется запятой."
-},
-{
-q:"Выберите предложение без пунктуационной ошибки:",
-a:[
-"Книга, лежащая на столе принадлежит мне.",
-"Книга лежащая на столе, принадлежит мне.",
-"Книга, лежащая на столе, принадлежит мне.",
-"Книга лежащая, на столе принадлежит мне."
-],
-correct:2,
-explain:"Причастный оборот после определяемого слова обособляется с двух сторон."
-},
-{
-q:"Какой знак обычно разделяет части СПП?",
-a:[
-"Точка",
-"Запятая",
-"Дефис",
-"Кавычки"
-],
-correct:1,
-explain:"Главная и придаточная части СПП обычно разделяются запятой."
-},
-{
-q:"Где знаки расставлены правильно?",
-a:[
-"Когда наступил вечер мы вернулись домой.",
-"Когда наступил вечер, мы вернулись домой.",
-"Когда, наступил вечер мы вернулись домой.",
-"Когда наступил, вечер мы вернулись домой."
-],
-correct:1,
-explain:"Придаточная часть стоит перед главной и отделяется запятой."
-}
+{q:"Выберите правильный вариант:",a:["Читая книгу ученик делал заметки.","Читая книгу, ученик делал заметки.","Читая, книгу ученик делал заметки.","Читая книгу ученик, делал заметки."],correct:1,explain:"Деепричастный оборот обособляется."},
+{q:"Где нужна запятая?",a:["Я знаю что ты прав.","Я знаю, что ты прав.","Я, знаю что ты прав.","Я знаю что, ты прав."],correct:1,explain:"Придаточная часть СПП отделяется запятой."},
+{q:"Выберите предложение без пунктуационной ошибки:",a:["Книга, лежащая на столе принадлежит мне.","Книга лежащая на столе, принадлежит мне.","Книга, лежащая на столе, принадлежит мне.","Книга лежащая, на столе принадлежит мне."],correct:2,explain:"Причастный оборот после определяемого слова обособляется с двух сторон."},
+{q:"Какой знак обычно разделяет части СПП?",a:["Точка","Запятая","Дефис","Кавычки"],correct:1,explain:"Главная и придаточная части СПП обычно разделяются запятой."},
+{q:"Где знаки расставлены правильно?",a:["Когда наступил вечер мы вернулись домой.","Когда наступил вечер, мы вернулись домой.","Когда, наступил вечер мы вернулись домой.","Когда наступил, вечер мы вернулись домой."],correct:1,explain:"Придаточная часть стоит перед главной и отделяется запятой."}
 ]
-
 };
 
 
 /* =========================
    NAVIGATION
 ========================= */
-
 function openApp(){
-
     document.getElementById("authPage").style.display="none";
     document.getElementById("app").style.display="block";
-
     const user=currentUser();
-
     if(user){
-        document.getElementById("greeting").textContent=
-            "Привет, "+user.name+"! 👋";
-
+        document.getElementById("greeting").textContent="Привет, "+user.name+"! 👋";
         document.getElementById("miniName").textContent=user.name;
-        document.getElementById("miniAvatar").textContent=
-            user.name.charAt(0).toUpperCase();
+        document.getElementById("miniAvatar").textContent=user.name.charAt(0).toUpperCase();
     }
-
     renderHome();
 }
 
 function navigate(page,button){
-
-    document.querySelectorAll(".nav button")
-    .forEach(b=>b.classList.remove("active"));
-
+    document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
     if(button) button.classList.add("active");
-
     if(page==="home") renderHome();
     if(page==="courses") renderCourses();
     if(page==="diagnostic") renderDiagnostic();
@@ -1315,862 +433,277 @@ function navigate(page,button){
 }
 
 function renderHome(){
-
     const user=currentUser();
-
     let totalLessons=sections.reduce((sum,s)=>sum+s.lessons.length,0);
     let done=user.completed.length;
     let percent=Math.round(done/totalLessons*100);
 
     document.getElementById("content").innerHTML=`
-
     <div class="hero">
         <div class="hero-text">
             <h2>Твой путь к грамотной речи ✨</h2>
-            <p>
-            Проходи уроки, выполняй задания, исправляй ошибки
-            и постепенно повышай свой уровень русского языка.
-            </p>
-
+            <p>Проходи уроки, выполняй задания, исправляй ошибки и постепенно повышай свой уровень русского языка.</p>
             <div class="progress-box">
-                <div style="font-size:12px;margin-bottom:5px">
-                    Общий прогресс — ${percent}%
-                </div>
-                <div class="progress">
-                    <div class="progress-fill" style="width:${percent}%"></div>
-                </div>
+                <div style="font-size:12px;margin-bottom:5px">Общий прогресс — ${percent}%</div>
+                <div class="progress"><div class="progress-fill" style="width:${percent}%"></div></div>
             </div>
         </div>
-
-        <button onclick="navigate('courses',document.querySelectorAll('.nav button')[1])">
-            Продолжить →
-        </button>
+        <button onclick="navigate('courses',document.querySelectorAll('.nav button')[1])">Продолжить →</button>
     </div>
 
     <div class="stats">
-
-        <div class="stat">
-            <div class="stat-icon">⭐</div>
-            <div class="stat-value">${user.stars}</div>
-            <div class="stat-name">Звёзды</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">🔥</div>
-            <div class="stat-value">${user.streak}</div>
-            <div class="stat-name">Серия занятий</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">📚</div>
-            <div class="stat-value">${done}</div>
-            <div class="stat-name">Уроков завершено</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">🏆</div>
-            <div class="stat-value">${getLevel(user.stars)}</div>
-            <div class="stat-name">Уровень</div>
-        </div>
-
+        <div class="stat"><div class="stat-icon">⭐</div><div class="stat-value">${user.stars}</div><div class="stat-name">Звёзды</div></div>
+        <div class="stat"><div class="stat-icon">🔥</div><div class="stat-value">${user.streak}</div><div class="stat-name">Серия занятий</div></div>
+        <div class="stat"><div class="stat-icon">📚</div><div class="stat-value">${done}</div><div class="stat-name">Уроков завершено</div></div>
+        <div class="stat"><div class="stat-icon">🏆</div><div class="stat-value">${getLevel(user.stars)}</div><div class="stat-name">Уровень</div></div>
     </div>
 
-    <div class="section-title">
-        <h3>Рекомендуем начать</h3>
-    </div>
-
+    <div class="section-title"><h3>Рекомендуем начать</h3></div>
     <div class="course-grid">
-
         ${sections.slice(0,3).map((s,i)=>`
-
         <div class="course">
-
             <div class="course-icon">${s.icon}</div>
-
             <h4>${s.title}</h4>
-
             <p>${s.description}</p>
-
-            <button onclick="openSection('${s.id}')">
-                ${user.completed.includes(s.id+"-0")?"Повторить":"Начать"}
-            </button>
-
+            <button onclick="openSection('${s.id}')">${user.completed.includes(s.id+"-0")?"Повторить":"Начать"}</button>
         </div>
-
         `).join("")}
-
-    </div>
-    `;
+    </div>`;
 }
 
 function getLevel(stars){
-
     if(stars>=100) return "Эксперт";
     if(stars>=60) return "Продвинутый";
     if(stars>=30) return "Практик";
     if(stars>=10) return "Ученик";
-
     return "Новичок";
 }
 
-
-/* =========================
-   COURSES
-========================= */
-
 function renderCourses(){
-
     document.getElementById("content").innerHTML=`
-
-    <div class="section-title">
-        <h3>Разделы обучения</h3>
-    </div>
-
+    <div class="section-title"><h3>Разделы обучения</h3></div>
     <div class="course-grid">
-
     ${sections.map(s=>`
-
         <div class="course">
-
             <div class="course-icon">${s.icon}</div>
-
             <h4>${s.title}</h4>
-
             <p>${s.description}</p>
-
-            <div style="font-size:12px;color:var(--muted);margin-bottom:12px">
-                ${s.lessons.length} уроков
-            </div>
-
-            <button onclick="openSection('${s.id}')">
-                Открыть раздел →
-            </button>
-
+            <div style="font-size:12px;color:var(--muted);margin-bottom:12px">${s.lessons.length} уроков</div>
+            <button onclick="openSection('${s.id}')">Открыть раздел →</button>
         </div>
-
     `).join("")}
-
-    </div>
-    `;
+    </div>`;
 }
 
 function openSection(id){
-
     const section=sections.find(s=>s.id===id);
-
     document.getElementById("content").innerHTML=`
-
     <div class="section-title">
         <div>
             <h3>${section.icon} ${section.title}</h3>
-            <p style="color:var(--muted);font-size:13px;margin-top:4px">
-                ${section.description}
-            </p>
+            <p style="color:var(--muted);font-size:13px;margin-top:4px">${section.description}</p>
         </div>
     </div>
-
     <div class="lesson-list">
-
     ${section.lessons.map((l,i)=>`
-
         <div class="lesson">
-
             <div class="lesson-left">
-
-                <div class="lesson-number">
-                    ${i+1}
-                </div>
-
-                <div>
-                    <h4>${l[0]}</h4>
-                    <p>${l[1]}</p>
-                </div>
-
+                <div class="lesson-number">${i+1}</div>
+                <div><h4>${l[0]}</h4><p>${l[1]}</p></div>
             </div>
-
-            <button onclick="startLesson('${id}',${i})">
-                ${currentUser().completed.includes(id+"-"+i)?"Повторить":"Начать"}
-            </button>
-
+            <button onclick="startLesson('${id}',${i})">${currentUser().completed.includes(id+"-"+i)?"Повторить":"Начать"}</button>
         </div>
-
     `).join("")}
-
-    </div>
-    `;
+    </div>`;
 }
 
-
-/* =========================
-   LESSON ENGINE
-========================= */
-
-let quizState={
-    section:"",
-    lesson:0,
-    questions:[],
-    index:0,
-    score:0,
-    answered:false
-};
+let quizState={ section:"", lesson:0, questions:[], index:0, score:0, answered:false };
 
 function startLesson(section,index){
-
-    const sectionData=sections.find(s=>s.id===section);
-
-    let questions=quizzes[section];
-
-    if(!questions){
-        questions=quizzes.punctuation;
-    }
-
-    quizState={
-        section,
-        lesson:index,
-        questions:[...questions].sort(()=>Math.random()-.5).slice(0,5),
-        index:0,
-        score:0,
-        answered:false
-    };
-
+    let questions=quizzes[section]||quizzes.punctuation;
+    quizState={ section, lesson:index, questions:[...questions].sort(()=>Math.random()-.5).slice(0,5), index:0, score:0, answered:false };
     renderQuestion();
 }
 
 function renderQuestion(){
-
     const state=quizState;
     const q=state.questions[state.index];
-
     document.getElementById("content").innerHTML=`
-
     <div class="quiz-card">
-
         <div class="quiz-head">
-            <span>
-                ${state.section.toUpperCase()}
-            </span>
-
-            <span>
-                Вопрос ${state.index+1} из ${state.questions.length}
-            </span>
+            <span>${state.section.toUpperCase()}</span>
+            <span>Вопрос ${state.index+1} из ${state.questions.length}</span>
         </div>
-
         <div class="progress" style="margin-bottom:25px;background:#eee">
-            <div class="progress-fill"
-            style="width:${((state.index)/state.questions.length)*100}%">
-            </div>
+            <div class="progress-fill" style="width:${((state.index)/state.questions.length)*100}%"></div>
         </div>
-
-        <div class="question">
-            ${q.q}
-        </div>
-
+        <div class="question">${q.q}</div>
         <div class="answers">
-
         ${q.a.map((answer,i)=>`
-
-            <button class="answer"
-            onclick="checkAnswer(${i})"
-            id="answer-${i}">
-                ${answer}
-            </button>
-
+            <button class="answer" onclick="checkAnswer(${i})" id="answer-${i}">${answer}</button>
         `).join("")}
-
         </div>
-
         <div id="explanation"></div>
-
-        <button id="nextButton"
-        class="next-btn hidden"
-        onclick="nextQuestion()">
+        <button id="nextButton" class="next-btn hidden" onclick="nextQuestion()">
             ${state.index===state.questions.length-1?"Завершить":"Следующий вопрос"}
         </button>
-
-    </div>
-
-    `;
+    </div>`;
 }
 
 function checkAnswer(index){
-
     if(quizState.answered) return;
-
     quizState.answered=true;
-
     const q=quizState.questions[quizState.index];
-
     const buttons=document.querySelectorAll(".answer");
-
-    buttons.forEach((b,i)=>{
-        if(i===q.correct) b.classList.add("correct");
-    });
-
-    if(index===q.correct){
-
-        quizState.score++;
-
-    }else{
-
-        document.getElementById("answer-"+index)
-        .classList.add("wrong");
-
+    buttons.forEach((b,i)=>{ if(i===q.correct) b.classList.add("correct"); });
+    if(index===q.correct){ quizState.score++; }else{
+        document.getElementById("answer-"+index).classList.add("wrong");
         registerMistake(quizState.section);
     }
-
     document.getElementById("explanation").innerHTML=`
-        <div class="explanation">
-        <b>${index===q.correct?"Правильно! ⭐":"Разберём ошибку:"}</b><br>
-        ${q.explain}
-        </div>
-    `;
-
-    document.getElementById("nextButton")
-    .classList.remove("hidden");
+        <div class="explanation"><b>${index===q.correct?"Правильно! ⭐":"Разберём ошибку:"}</b><br>${q.explain}</div>`;
+    document.getElementById("nextButton").classList.remove("hidden");
 }
 
 function nextQuestion(){
-
     if(quizState.index<quizState.questions.length-1){
-
-        quizState.index++;
-        quizState.answered=false;
-
-        renderQuestion();
-
-    }else{
-
-        finishLesson();
-    }
+        quizState.index++; quizState.answered=false; renderQuestion();
+    }else{ finishLesson(); }
 }
 
 function registerMistake(section){
-
     const user=currentUser();
-
     if(section==="participle") user.mistakes.participle++;
     else if(section==="gerund") user.mistakes.gerund++;
     else if(section==="spp") user.mistakes.spp++;
     else user.mistakes.punctuation++;
-
     updateUser(user);
 }
 
 function finishLesson(){
-
     const user=currentUser();
-
     const key=quizState.section+"-"+quizState.lesson;
-
-    if(!user.completed.includes(key)){
-        user.completed.push(key);
-        user.stars+=quizState.score*2;
-    }
-
+    if(!user.completed.includes(key)){ user.completed.push(key); user.stars+=quizState.score*2; }
     updateUser(user);
-
-    const percent=Math.round(
-        quizState.score/quizState.questions.length*100
-    );
-
+    const percent=Math.round(quizState.score/quizState.questions.length*100);
     document.getElementById("content").innerHTML=`
-
     <div class="quiz-card" style="text-align:center">
-
-        <div style="font-size:50px;margin-bottom:15px">
-            ${percent>=80?"🏆":"🌱"}
-        </div>
-
+        <div style="font-size:50px;margin-bottom:15px">${percent>=80?"🏆":"🌱"}</div>
         <h2>Урок завершён!</h2>
-
-        <p style="color:var(--muted);margin:10px 0 20px">
-            Ты ответил правильно на
-            <b>${quizState.score}</b>
-            из
-            <b>${quizState.questions.length}</b>
-            вопросов.
-        </p>
-
-        <div style="font-size:25px;font-weight:800">
-            ${percent}%
-        </div>
-
-        <p style="margin-top:8px">
-            Получено ⭐ ${quizState.score*2}
-        </p>
-
-        <button class="next-btn"
-        onclick="renderCourses()">
-            Вернуться к разделам
-        </button>
-
-    </div>
-    `;
+        <p style="color:var(--muted);margin:10px 0 20px">Ты ответил правильно на <b>${quizState.score}</b> из <b>${quizState.questions.length}</b> вопросов.</p>
+        <div style="font-size:25px;font-weight:800">${percent}%</div>
+        <p style="margin-top:8px">Получено ⭐ ${quizState.score*2}</p>
+        <button class="next-btn" onclick="renderCourses()">Вернуться к разделам</button>
+    </div>`;
 }
-
-
-/* =========================
-   DIAGNOSTIC
-========================= */
 
 const diagnosticQuestions=[
-
-{
-q:"Выберите предложение с причастным оборотом.",
-a:[
-"Ученик читает книгу.",
-"Ученик, внимательно изучающий текст, сделал вывод.",
-"Ученик сделал вывод.",
-"Ученик быстро пишет."
-],
-correct:1,
-topic:"participle"
-},
-
-{
-q:"Выберите предложение с деепричастным оборотом.",
-a:[
-"Девочка читает.",
-"Девочка читала книгу.",
-"Читая книгу, девочка делала заметки.",
-"Девочка записала ответ."
-],
-correct:2,
-topic:"gerund"
-},
-
-{
-q:"Выберите СПП.",
-a:[
-"Наступил вечер.",
-"Мы вернулись домой, потому что начался дождь.",
-"Наступил вечер и стало темно.",
-"Дождь прекратился."
-],
-correct:1,
-topic:"spp"
-},
-
-{
-q:"Выберите правильную пунктуацию.",
-a:[
-"Читая книгу ученик делал заметки.",
-"Читая книгу, ученик делал заметки.",
-"Читая, книгу ученик делал заметки.",
-"Читая книгу ученик, делал заметки."
-],
-correct:1,
-topic:"punctuation"
-},
-
-{
-q:"Где правильно обособлен причастный оборот?",
-a:[
-"Дом построенный недавно выглядит красиво.",
-"Дом, построенный недавно, выглядит красиво.",
-"Дом построенный недавно, выглядит красиво.",
-"Дом, построенный недавно выглядит красиво."
-],
-correct:1,
-topic:"participle"
-},
-
-{
-q:"В каком предложении нет грамматической ошибки?",
-a:[
-"Подходя к школе, начался дождь.",
-"Читая текст, ученик делал пометки.",
-"Возвращаясь домой, мне позвонили.",
-"Изучая тему, правило стало понятнее."
-],
-correct:1,
-topic:"gerund"
-},
-
-{
-q:"Определите вид придаточного: «Я знаю, что ты придёшь».",
-a:[
-"места",
-"условия",
-"изъяснительное",
-"определительное"
-],
-correct:2,
-topic:"spp"
-},
-
-{
-q:"Выберите правильный вариант.",
-a:[
-"Когда закончился урок мы вышли.",
-"Когда закончился урок, мы вышли.",
-"Когда, закончился урок мы вышли.",
-"Когда закончился, урок мы вышли."
-],
-correct:1,
-topic:"punctuation"
-}
-
+{q:"Выберите предложение с причастным оборотом.",a:["Ученик читает книгу.","Ученик, внимательно изучающий текст, сделал вывод.","Ученик сделал вывод.","Ученик быстро пишет."],correct:1,topic:"participle"},
+{q:"Выберите предложение с деепричастным оборотом.",a:["Девочка читает.","Девочка читала книгу.","Читая книгу, девочка делала заметки.","Девочка записала ответ."],correct:2,topic:"gerund"},
+{q:"Выберите СПП.",a:["Наступил вечер.","Мы вернулись домой, потому что начался дождь.","Наступил вечер и стало темно.","Дождь прекратился."],correct:1,topic:"spp"},
+{q:"Выберите правильную пунктуацию.",a:["Читая книгу ученик делал заметки.","Читая книгу, ученик делал заметки.","Читая, книгу ученик делал заметки.","Читая книгу ученик, делал заметки."],correct:1,topic:"punctuation"},
+{q:"Где правильно обособлен причастный оборот?",a:["Дом построенный недавно выглядит красиво.","Дом, построенный недавно, выглядит красиво.","Дом построенный недавно, выглядит красиво.","Дом, построенный недавно выглядит красиво."],correct:1,topic:"participle"},
+{q:"В каком предложении нет грамматической ошибки?",a:["Подходя к школе, начался дождь.","Читая текст, ученик делал пометки.","Возвращаясь домой, мне позвонили.","Изучая тему, правило стало понятнее."],correct:1,topic:"gerund"},
+{q:"Определите вид придаточного: «Я знаю, что ты придёшь».",a:["места","условия","изъяснительное","определительное"],correct:2,topic:"spp"},
+{q:"Выберите правильный вариант.",a:["Когда закончился урок мы вышли.","Когда закончился урок, мы вышли.","Когда, закончился урок мы вышли.","Когда закончился, урок мы вышли."],correct:1,topic:"punctuation"}
 ];
 
-let diagnosticState={
-    index:0,
-    score:0
-};
+let diagnosticState={ index:0, score:0 };
 
-function renderDiagnostic(){
-
-    diagnosticState={
-        index:0,
-        score:0
-    };
-
-    renderDiagnosticQuestion();
-}
+function renderDiagnostic(){ diagnosticState={ index:0, score:0 }; renderDiagnosticQuestion(); }
 
 function renderDiagnosticQuestion(){
-
     const q=diagnosticQuestions[diagnosticState.index];
-
     document.getElementById("content").innerHTML=`
-
     <div class="quiz-card">
-
-        <div class="quiz-head">
-            <span>ДИАГНОСТИКА</span>
-            <span>
-                ${diagnosticState.index+1}/${diagnosticQuestions.length}
-            </span>
-        </div>
-
-        <h2 style="margin-bottom:8px">
-            Тест уровня знаний
-        </h2>
-
-        <p style="color:var(--muted);margin-bottom:22px">
-            Этот тест поможет определить, какие темы требуют
-            дополнительной практики.
-        </p>
-
+        <div class="quiz-head"><span>ДИАГНОСТИКА</span><span>${diagnosticState.index+1}/${diagnosticQuestions.length}</span></div>
+        <h2 style="margin-bottom:8px">Тест уровня знаний</h2>
+        <p style="color:var(--muted);margin-bottom:22px">Этот тест поможет определить, какие темы требуют дополнительной практики.</p>
         <div class="question">${q.q}</div>
-
-        <div class="answers">
-
-        ${q.a.map((a,i)=>`
-            <button class="answer"
-            onclick="diagnosticAnswer(${i})">
-                ${a}
-            </button>
-        `).join("")}
-
-        </div>
-
-    </div>
-    `;
+        <div class="answers">${q.a.map((a,i)=>`<button class="answer" onclick="diagnosticAnswer(${i})">${a}</button>`).join("")}</div>
+    </div>`;
 }
 
 function diagnosticAnswer(index){
-
     const q=diagnosticQuestions[diagnosticState.index];
-
-    if(index===q.correct){
-        diagnosticState.score++;
-    }
-
-    if(diagnosticState.index<diagnosticQuestions.length-1){
-
-        diagnosticState.index++;
-
-        renderDiagnosticQuestion();
-
-    }else{
-
-        finishDiagnostic();
-    }
+    if(index===q.correct) diagnosticState.score++;
+    if(diagnosticState.index<diagnosticQuestions.length-1){ diagnosticState.index++; renderDiagnosticQuestion(); }else{ finishDiagnostic(); }
 }
 
 function finishDiagnostic(){
-
     const user=currentUser();
-
-    const percent=Math.round(
-        diagnosticState.score/
-        diagnosticQuestions.length*100
-    );
-
-    user.before=percent;
-
-    updateUser(user);
-
+    const percent=Math.round(diagnosticState.score/diagnosticQuestions.length*100);
+    user.before=percent; updateUser(user);
     document.getElementById("content").innerHTML=`
-
     <div class="quiz-card" style="text-align:center">
-
         <div style="font-size:48px">📊</div>
-
         <h2>Диагностика завершена</h2>
-
-        <p style="color:var(--muted);margin:10px">
-            Твой результат до обучения:
-        </p>
-
-        <div style="font-size:45px;font-weight:800">
-            ${percent}%
-        </div>
-
-        <p style="margin:10px 0 20px">
-            ${getDiagnosticText(percent)}
-        </p>
-
-        <button class="next-btn"
-        onclick="renderCourses()">
-            Перейти к обучению
-        </button>
-
-    </div>
-    `;
+        <p style="color:var(--muted);margin:10px">Твой результат до обучения:</p>
+        <div style="font-size:45px;font-weight:800">${percent}%</div>
+        <p style="margin:10px 0 20px">${getDiagnosticText(percent)}</p>
+        <button class="next-btn" onclick="renderCourses()">Перейти к обучению</button>
+    </div>`;
 }
 
 function getDiagnosticText(p){
-
     if(p>=80) return "Отличная база! Можно переходить к сложным заданиям.";
     if(p>=50) return "Средний уровень. Некоторые темы требуют практики.";
     return "Начальный уровень. Рекомендуем пройти основные уроки.";
 }
 
-
-/* =========================
-   ANALYTICS
-========================= */
-
 function renderAnalytics(){
-
     const user=currentUser();
-
     const mistakes=user.mistakes;
-
     const before=user.before===null?60:user.before;
-    const after=user.after===null?
-        Math.min(100,before+20):
-        user.after;
-
-    const topics=[
-        ["Причастия",mistakes.participle,"participle"],
-        ["Деепричастия",mistakes.gerund,"gerund"],
-        ["СПП",mistakes.spp,"spp"],
-        ["Пунктуация",mistakes.punctuation,"punctuation"]
-    ];
-
+    const after=user.after===null?Math.min(100,before+20):user.after;
+    const topics=[["Причастия",mistakes.participle,"participle"],["Деепричастия",mistakes.gerund,"gerund"],["СПП",mistakes.spp,"spp"],["Пунктуация",mistakes.punctuation,"punctuation"]];
     document.getElementById("content").innerHTML=`
-
-    <div class="section-title">
-        <h3>📊 Аналитика обучения</h3>
-    </div>
-
+    <div class="section-title"><h3>📊 Аналитика обучения</h3></div>
     <div class="stats">
-
-        <div class="stat">
-            <div class="stat-icon">📝</div>
-            <div class="stat-value">${before}%</div>
-            <div class="stat-name">Диагностика до обучения</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">🎯</div>
-            <div class="stat-value">${after}%</div>
-            <div class="stat-name">Результат после обучения</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">📈</div>
-            <div class="stat-value">+${Math.max(0,after-before)}%</div>
-            <div class="stat-name">Изменение результата</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">❌</div>
-            <div class="stat-value">
-                ${Object.values(mistakes).reduce((a,b)=>a+b,0)}
-            </div>
-            <div class="stat-name">Зафиксировано ошибок</div>
-        </div>
-
+        <div class="stat"><div class="stat-icon">📝</div><div class="stat-value">${before}%</div><div class="stat-name">Диагностика до обучения</div></div>
+        <div class="stat"><div class="stat-icon">🎯</div><div class="stat-value">${after}%</div><div class="stat-name">Результат после обучения</div></div>
+        <div class="stat"><div class="stat-icon">📈</div><div class="stat-value">+${Math.max(0,after-before)}%</div><div class="stat-name">Изменение результата</div></div>
+        <div class="stat"><div class="stat-icon">❌</div><div class="stat-value">${Object.values(mistakes).reduce((a,b)=>a+b,0)}</div><div class="stat-name">Зафиксировано ошибок</div></div>
     </div>
-
     <div class="chart-card">
-
         <h3>Результат «До → После»</h3>
-
-        <div class="chart-row">
-
-            <div class="chart-label">
-                <span>До обучения</span>
-                <b>${before}%</b>
-            </div>
-
-            <div class="bar">
-                <div class="bar-fill before"
-                style="width:${before}%"></div>
-            </div>
-
-        </div>
-
-        <div class="chart-row">
-
-            <div class="chart-label">
-                <span>После обучения</span>
-                <b>${after}%</b>
-            </div>
-
-            <div class="bar">
-                <div class="bar-fill after"
-                style="width:${after}%"></div>
-            </div>
-
-        </div>
-
+        <div class="chart-row"><div class="chart-label"><span>До обучения</span><b>${before}%</b></div><div class="bar"><div class="bar-fill before" style="width:${before}%"></div></div></div>
+        <div class="chart-row"><div class="chart-label"><span>После обучения</span><b>${after}%</b></div><div class="bar"><div class="bar-fill after" style="width:${after}%"></div></div></div>
     </div>
-
-    <div class="section-title">
-        <h3>Ошибки по темам</h3>
-    </div>
-
+    <div class="section-title"><h3>Ошибки по темам</h3></div>
     <div class="chart-card">
-
-        ${topics.map(t=>{
-
-            let value=Math.min(100,t[1]*10);
-
-            return`
-
-            <div class="chart-row">
-
-                <div class="chart-label">
-                    <span>${t[0]}</span>
-                    <b>${t[1]} ошибок</b>
-                </div>
-
-                <div class="bar">
-                    <div class="bar-fill before"
-                    style="width:${value}%"></div>
-                </div>
-
-            </div>
-
-            `;
-
-        }).join("")}
-
-    </div>
-
-    `;
+        ${topics.map(t=>{let value=Math.min(100,t[1]*10);return`<div class="chart-row"><div class="chart-label"><span>${t[0]}</span><b>${t[1]} ошибок</b></div><div class="bar"><div class="bar-fill before" style="width:${value}%"></div></div></div>`;}).join("")}
+    </div>`;
 }
-
-
-/* =========================
-   PROFILE
-========================= */
 
 function renderProfile(){
-
     const user=currentUser();
-
-    const totalLessons=sections.reduce(
-        (sum,s)=>sum+s.lessons.length,0
-    );
-
-    const percent=Math.round(
-        user.completed.length/totalLessons*100
-    );
-
+    const totalLessons=sections.reduce((sum,s)=>sum+s.lessons.length,0);
+    const percent=Math.round(user.completed.length/totalLessons*100);
     document.getElementById("content").innerHTML=`
-
-    <div class="section-title">
-        <h3>♙ Мой профиль</h3>
-    </div>
-
+    <div class="section-title"><h3>♙ Мой профиль</h3></div>
     <div class="profile-card">
-
-        <div class="big-avatar">
-            ${user.name.charAt(0).toUpperCase()}
-        </div>
-
+        <div class="big-avatar">${user.name.charAt(0).toUpperCase()}</div>
         <h2>${user.name}</h2>
-
-        <p style="color:var(--muted);margin-top:4px">
-            ${user.email}
-        </p>
-
+        <p style="color:var(--muted);margin-top:4px">${user.email}</p>
         <div style="margin-top:25px">
-
             <b>Общий прогресс</b>
-
-            <div class="progress"
-            style="margin-top:8px;background:#eee">
-
-                <div class="progress-fill"
-                style="width:${percent}%">
-                </div>
-
-            </div>
-
-            <div style="font-size:12px;color:var(--muted);margin-top:5px">
-                ${percent}% завершено
-            </div>
-
+            <div class="progress" style="margin-top:8px;background:#eee"><div class="progress-fill" style="width:${percent}%"></div></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:5px">${percent}% завершено</div>
         </div>
-
         <div class="badges">
-
-            <div class="badge">
-                ⭐ ${user.stars} звёзд
-            </div>
-
-            <div class="badge">
-                🔥 ${user.streak} дней
-            </div>
-
-            <div class="badge">
-                🏆 ${getLevel(user.stars)}
-            </div>
-
+            <div class="badge">⭐ ${user.stars} звёзд</div>
+            <div class="badge">🔥 ${user.streak} дней</div>
+            <div class="badge">🏆 ${getLevel(user.stars)}</div>
         </div>
-
-    </div>
-    `;
+    </div>`;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-function toggleMobile(){
-
-    const sidebar=document.querySelector(".sidebar");
-
-    sidebar.style.display=
-        sidebar.style.display==="block"
-        ?"none"
-        :"block";
-}
-
-
-/* =========================
-   START
-========================= */
+function toggleMobile(){ const sidebar=document.querySelector(".sidebar"); sidebar.style.display=sidebar.style.display==="block"?"none":"block"; }
 
 window.addEventListener("load",()=>{
-
-    if(localStorage.getItem(STORAGE_SESSION)){
-        openApp();
-    }else{
-        document.getElementById("authPage").style.display="flex";
-    }
-
+    if(localStorage.getItem(STORAGE_SESSION)){ openApp(); }else{ document.getElementById("authPage").style.display="flex"; }
 });
-
 </script>
-
 </body>
 </html>
